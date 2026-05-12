@@ -1,16 +1,17 @@
 ------------POST-----------
-http://127.0.0.1:5000/Carro
+http://127.0.0.1:5000/Jogo
 ---------------------------
 
 Body - raw - JSON
 
 {
-  "modelo": "Fusca 2.0",
-  "marca": "Volkswagen",
-  "ano": 1975
+  "titulo": "Minecraft",
+  "genero": "Sandbox / Sobrevivência",
+  "plataforma": "PC, Xbox, PlayStation, Nintendo Switch, Mobile"
+  "dev": "Mojang Studios"
 }
 
 ------------GET------------
-http://127.0.0.1:5000/Carro
-http://127.0.0.1:5000/Carro/1
+http://127.0.0.1:5000/Jogo
+http://127.0.0.1:5000/Jogo/1
 ---------------------------
