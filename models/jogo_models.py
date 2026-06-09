@@ -10,15 +10,14 @@ class Jogo(db.Model):
     id = db.Column(db.Integer, primary_key=True)  # Coluna para o ID do jogo, chave primária
     titulo = db.Column(db.String(80), nullable=False)  # Coluna para o titulo do jogo, não pode ser nulo
     genero = db.Column(db.String(80), nullable=False)  # Coluna para a genero do jogo, não pode ser nulo
-    plataforma = db.Column(db.String, nullable=False)  # Coluna para o plataforma do jogo, não pode ser nulo
-    dev = db.Column(db.String, nullable=False)
-
-    # Método para retornar os dados do jogo como um dicionário
+    desenvolvedor = db.Column(db.String(80), nullable=False)  # Coluna para o desenvolvedor do jogo, não pode ser nulo
+    plataforma = db.Column(db.String(80), nullable=False)
+    
     def json(self):  
         return {
             'id': self.id,  # ID do jogo
             'titulo': self.titulo,  # titulo do jogo
             'genero': self.genero,  # genero do jogo
-            'plataforma': self.plataforma,  # plataforma do jogo
-            'dev': self.dev 
+            'desenvolvedor': self.desenvolvedor,  # desenvolvedor do jogo
+            'plataforma': self.plataforma
         }
